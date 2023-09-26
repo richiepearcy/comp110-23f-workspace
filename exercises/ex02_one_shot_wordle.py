@@ -33,14 +33,14 @@ while idx < secret_word_length:
             else:
                 # if guessed letter is not found at that index, keep checking other index's
                     alternate_idx += 1
-            if comparison is True:
-                # Yellow box is printed for that letter if is located at a different index in secret word, and then move on to check other letters
-                emoji = emoji + YELLOW_BOX 
-                idx += 1 
-            else:
-                # White box is printed for that letter if not located at all in secret word, and then move on to check other letters
-                emoji = emoji + WHITE_BOX    
-                idx += 1
+        if comparison is True:
+            # Yellow box is printed for that letter if is located at a different index in secret word, and then move on to check other letters
+            emoji = emoji + YELLOW_BOX 
+            idx += 1 
+        else:
+            # White box is printed for that letter if not located at all in secret word, and then move on to check other letters
+            emoji = emoji + WHITE_BOX    
+            idx += 1
 if guessed_word == secret_word:
     # If they guess correctly, inform them
     print(emoji)
