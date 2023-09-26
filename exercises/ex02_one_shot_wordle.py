@@ -1,7 +1,7 @@
 """EX02 Assignment COMP 110"""
 __author__ = "730318079"
 
-secret_word: str = "knoll"
+secret_word: str = "python"
 secret_word_length: int = len(secret_word)
 guessed_word: str = input(f"What is your { secret_word_length }-letter guess? ")
 guessed_word_length: int = len(guessed_word)
@@ -42,7 +42,6 @@ while idx < secret_word_length:
     else: 
         # If guess is not same length as secret word, inform them to try again
         print(f"That was not a { secret_word_length }-letter guess!")
-        exit()
 if guessed_word == secret_word:
     # If they guess correctly, inform them
     print(emoji)
@@ -51,4 +50,3 @@ else:
     # If they guess incorrectly, inform them
     print(emoji)
     print("Not quite. Play again soon!")
-    exit()
