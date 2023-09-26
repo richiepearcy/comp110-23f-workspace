@@ -1,4 +1,4 @@
-"""EX02 Assignment COMP 110"""
+"""EX02 Assignment COMP 110!"""
 __author__ = "730318079"
 
 secret_word: str = "python"
@@ -15,8 +15,8 @@ idx: int = 0
 
 while guessed_word_length != secret_word_length:
     # If guess is not same length as secret word, inform them to try again
-        guessed_word = input(f"That was not { secret_word_length } letters! Try again: ")
-        guessed_word_length  = len(guessed_word)
+    guessed_word = input(f"That was not { secret_word_length } letters! Try again: ")
+    guessed_word_length = len(guessed_word)
 while idx < secret_word_length:
     if guessed_word[idx] == secret_word[idx]:
         # if first letter of guess matches first letter of secret word, print a green box and continue checking other letters
@@ -32,7 +32,7 @@ while idx < secret_word_length:
                 comparison = True
             else:
                 # if guessed letter is not found at that index, keep checking other index's
-                    alternate_idx += 1
+                alternate_idx += 1
         if comparison is True:
             # Yellow box is printed for that letter if is located at a different index in secret word, and then move on to check other letters
             emoji = emoji + YELLOW_BOX 
