@@ -92,7 +92,10 @@ class River:
         self.view_river()
 
     def one_river_week(self):
-        self.one_river_day(7)
+        idx: int = 0
+        while idx < 7:
+            self.one_river_day()
+            idx += 1
         return None
     
     def remove_fish(self, amount: int):
