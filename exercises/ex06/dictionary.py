@@ -3,7 +3,7 @@ __author__ = "730318079"
 
 
 def invert(dictionary: dict[str, str]) -> dict[str, str]:
-    #"""Rearranging key value pairs."""
+    # Rearranging key value pairs.
     new_dict: dict[str, str] = {}
     for key in dictionary:
         if dictionary[key] in new_dict:
@@ -14,7 +14,7 @@ def invert(dictionary: dict[str, str]) -> dict[str, str]:
 
 
 def favorite_color(color: dict[str, str]) -> str:
-    #"""Finding and isolating in a string the color that appears most in the dictionary."""
+    # Finding and isolating in a string the color that appears most in the dictionary.
     fav_color: str = ""
     frequency_colors: dict[str, int] = {}
     for key in color:
@@ -31,7 +31,7 @@ def favorite_color(color: dict[str, str]) -> str:
 
 
 def count(number: list[str]) -> dict[str, int]:
-    #"""Counting amount a str value appears on list and corresponding the number amount with its string in new dictionary."""
+    # Counting amount a str value appears on list and corresponding the number amount with its string in new dictionary.
     new_dict_2: dict[str, int] = {}
     count_idx = 0
     while count_idx < len(number) - 1:
@@ -44,7 +44,7 @@ def count(number: list[str]) -> dict[str, int]:
 
 
 def alphabetizer(alphabet: list[str]) -> dict[str, list[str]]:
-    #"""Transforming list of strings to dictionary ordered by strings' first letter."""
+    # Transforming list of strings to dictionary ordered by strings' first letter.
     new_dict_3: dict[str, list[str]] = {}
     idx = 0
     while idx < len(alphabet) - 1: 
@@ -57,7 +57,7 @@ def alphabetizer(alphabet: list[str]) -> dict[str, list[str]]:
 
 
 def update_attendance(attendance: dict[str, list[str]], y: str, z: str) -> dict[str, list[str]]:
-    #"""Adding string elements into preexisting dictionary."""
+    # Adding string elements into preexisting dictionary.
     if y in attendance:
         attendance[y].append(z)
     else:
