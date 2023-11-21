@@ -41,7 +41,7 @@ class River:
     def bears_eating(self):
         """Simulating Bears Eating Daily."""
         for x in self.bears:
-            if len(self.fish) - 1 >= 5:
+            if len(self.fish) + 1 >= 5:
                 self.remove_fish(3)
                 x.eat(3)
         return None
