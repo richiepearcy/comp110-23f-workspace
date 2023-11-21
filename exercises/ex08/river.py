@@ -57,7 +57,7 @@ class River:
     def repopulate_fish(self):
         """Adding newborn fish."""
         new_fish: int
-        new_fish = (len(self.fish) / 2) * 4
+        new_fish = (len(self.fish) // 2) * 4
         for x in range(0, new_fish):
             self.fish.append(Fish())
         return None
@@ -65,7 +65,7 @@ class River:
     def repopulate_bears(self):
         """Adding newborn bears."""
         new_bears: int
-        new_bears = (len(self.bears) / 2) * 1
+        new_bears = (len(self.bears) // 2) * 1
         for x in range(0, new_bears):
             self.bears.append(Bear())
         return None
