@@ -7,6 +7,7 @@ from exercises.ex08.bear import Bear
 
 class River:
     """River Ecosystem class set up."""
+    # Class Attributes
     day: int
     bears: list
     fish: list
@@ -18,9 +19,9 @@ class River:
         self.bears: list[Bear] = []
         # populate the river with fish and bears
         for x in range(0, num_fish):
-            self.fish.append(Fish())
+            self.fish.append(x())
         for x in range(0, num_bears):
-            self.bears.append(Bear())
+            self.bears.append(x())
 
     def check_ages(self):
         """Checking Ages of Animals."""
@@ -28,10 +29,10 @@ class River:
         fish_list: list[Fish] = []
         for x in self.bears:
             if x.age <= 5:
-                bear_list.append(Bear())
+                bear_list.append(x())
         for x in self.fish:
             if x.age <= 3:
-                fish_list.append(Fish())
+                fish_list.append(x())
         self.bears = bear_list
         self.fish = fish_list
         return None
@@ -49,7 +50,7 @@ class River:
         bear_list: list[Bear] = []
         for x in self.bears:
             if x.hunger_score > 0:
-                bear_list.append(Bear())
+                bear_list.append(x())
         self.bears = bear_list
         return None
         

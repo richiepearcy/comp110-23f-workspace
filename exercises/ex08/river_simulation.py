@@ -1,4 +1,3 @@
-from exercises.ex08.river import River
 """River Simulation."""
 
 
