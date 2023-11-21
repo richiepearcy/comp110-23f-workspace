@@ -1,5 +1,4 @@
 """File to define River class."""
-from __future__ import annotations
 __author__ = "730318079"
 
 from exercises.ex08.fish import Fish
@@ -10,8 +9,8 @@ class River:
     """River Ecosystem class set up."""
     # Class Attributes
     day: int
-    bears: list
-    fish: list
+    bears: list[Bear]
+    fish: list[Fish]
     
     def __init__(self, num_fish: int, num_bears: int):
         """New River with num_fish Fish and num_bears Bears."""
@@ -73,9 +72,9 @@ class River:
     
     def view_river(self):
         """Viewing current results and stats of river."""
-        output: str = f"~~~ Day {self.day}: ~~~\n"
-        output += f"Fish population: {self.fish}\n"
-        output += f"Bear population: {self.bears}\n"
+        print(f"~~~ Day {self.day}: ~~~")
+        print(f"Fish population: {len(self.fish)}")
+        print(f"Bear population: {len(self.bears)}")
         return None
             
     def one_river_day(self):
