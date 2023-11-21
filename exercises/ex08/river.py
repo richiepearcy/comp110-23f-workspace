@@ -1,4 +1,5 @@
 """File to define River class"""
+__author__ = "730318079"
 
 from exercises.ex08.fish import Fish
 from exercises.ex08.bear import Bear
@@ -23,10 +24,10 @@ class River:
         bear_list: list[Bear]
         fish_list: list[Fish]
         for x in range(0, len(self.bears)):
-            if self.age < 5:
+            if Bear.age <= 5:
                 bear_list.append(Bear())
         for x in range(0, len(self.fish)):
-            if self.age < 3:
+            if Fish.age <= 3:
                 fish_list.append(Fish())
         self.bears = bear_list
         self.fish = fish_list
@@ -35,7 +36,7 @@ class River:
     def bears_eating(self):
         for x in self.bears:
             if len(self.fish) >= 5:
-                River.remove_fish(3)
+                River.remove_fish(self, 3)
                 Bear.eat(3)
         return None
     
@@ -89,16 +90,11 @@ class River:
         self.view_river()
 
     def one_river_week(self):
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
+        factor: int = 7
+        self.one_river_day(self * factor)
         return None
     
     def remove_fish(self, amount: int):
         for x in self.fish:
-            self.fish.pop(Fish[0])
+            self.fish.pop(self.fish[0])
         return None
