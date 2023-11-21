@@ -30,10 +30,10 @@ class River:
         fish_list: list[Fish] = []
         for x in self.bears:
             if x.age <= 5:
-                bear_list.append(Bear())
+                bear_list.append(x())
         for x in self.fish:
             if x.age <= 3:
-                fish_list.append(Fish())
+                fish_list.append(x())
         self.bears = bear_list
         self.fish = fish_list
         return None
@@ -41,7 +41,7 @@ class River:
     def bears_eating(self):
         """Simulating Bears Eating Daily."""
         for x in self.bears:
-            if len(self.fish) + 1 >= 5:
+            if len(self.fish) >= 5:
                 self.remove_fish(3)
                 x.eat(3)
         return None
