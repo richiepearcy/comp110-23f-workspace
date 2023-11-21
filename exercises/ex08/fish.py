@@ -2,6 +2,7 @@
 
 class Fish:
     """Class for individual Fish."""
+    
     age: int
     
     def __init__(self, age_init: int = 0):

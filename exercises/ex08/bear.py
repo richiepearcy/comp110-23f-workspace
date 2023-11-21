@@ -6,6 +6,7 @@ class Bear:
     age: int 
     hunger_score: int
     
+    
     def __init__(self, age_init: int = 0, hunger_init: int = 0):
         """Bear Constructor."""
         self.age = age_init
