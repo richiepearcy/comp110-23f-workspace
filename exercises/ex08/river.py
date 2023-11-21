@@ -21,8 +21,8 @@ class River:
             self.bears.append(Bear())
 
     def check_ages(self):
-        bear_list: list[Bear]
-        fish_list: list[Fish]
+        bear_list: list[Bear] = []
+        fish_list: list[Fish] = []
         for x in range(0, len(self.bears)):
             if Bear.age <= 5:
                 bear_list.append(Bear())
@@ -37,11 +37,11 @@ class River:
         for x in self.bears:
             if len(self.fish) >= 5:
                 River.remove_fish(self, 3)
-                Bear.eat(3)
+                Bear.eat(self, 3)
         return None
     
     def check_hunger(self):
-        bear_list: list[Bear]
+        bear_list: list[Bear] = []
         idx: int = 0
         while idx < len(self.bears) - 1:
             if Bear.hunger_score > 0:
