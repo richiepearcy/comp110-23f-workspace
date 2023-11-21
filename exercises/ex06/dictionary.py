@@ -61,5 +61,5 @@ def update_attendance(attendance: dict[str, list[str]], y: str, z: str) -> dict[
     if y not in attendance:
         attendance[y] = [z]
     else:
-        attendance[y] += attendance[y].append(z)
+        attendance[y] = [z]
     return attendance
