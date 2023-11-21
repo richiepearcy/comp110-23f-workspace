@@ -5,10 +5,10 @@ __author__ = "730318079"
 from exercises.ex08.fish import Fish
 from exercises.ex08.bear import Bear
 
+
 class River:
     """River Ecosystem class set up."""
     # Class Attributes
-    
     day: int
     bears: list
     fish: list
@@ -41,7 +41,7 @@ class River:
     def bears_eating(self):
         """Simulating Bears Eating Daily."""
         for x in self.bears:
-            if len(self.fish) >= 5:
+            if len(self.fish) - 1 >= 5:
                 self.remove_fish(3)
                 x.eat(3)
         return None
@@ -51,7 +51,7 @@ class River:
         bear_list: list[Bear] = []
         for x in self.bears:
             if x.hunger_score > 0:
-                bear_list.append(x())
+                bear_list.append(Bear())
         self.bears = bear_list
         return None
         
@@ -81,11 +81,11 @@ class River:
         # Increase day by 1
         self.day += 1
         # Simulate one day for all Bears
-        for bear in self.bears:
-            bear.one_day()
+        for x in self.bears:
+            x.one_day()
         # Simulate one day for all Fish
-        for fish in self.fish:
-            fish.one_day()
+        for x in self.fish:
+            x.one_day()
         # Simulate Bear's eating
         self.bears_eating()
         # Remove hungry Bear's from River

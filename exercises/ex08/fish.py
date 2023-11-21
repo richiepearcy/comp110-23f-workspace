@@ -1,10 +1,10 @@
 """File to define Fish class."""
 
+
 class Fish:
     """Class for individual Fish."""
-    
     age: int
-    
+
     def __init__(self, age_init: int = 0):
         """Fish Constructor."""
         self.age = age_init
