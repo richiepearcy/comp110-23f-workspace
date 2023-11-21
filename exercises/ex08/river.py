@@ -6,7 +6,7 @@ from exercises.ex08.fish import Fish
 from exercises.ex08.bear import Bear
 
 class River:
-    #"""River Ecosystem class set up."""
+    """River Ecosystem class set up."""
     day: int
     bears: list
     fish: list
@@ -45,7 +45,7 @@ class River:
         return None
     
     def check_hunger(self):
-        #"""Killing off Bears who haven't eaten."""
+        """Killing off Bears who haven't eaten."""
         bear_list: list[Bear] = []
         for x in self.bears:
             if x.hunger_score > 0:
