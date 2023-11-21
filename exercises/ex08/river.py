@@ -42,9 +42,11 @@ class River:
     
     def check_hunger(self):
         bear_list: list[Bear]
-        for x in self.bears:
+        idx: int = 0
+        while idx < len(self.bears) - 1:
             if Bear.hunger_score > 0:
                 bear_list.append(Bear())
+            idx += 1
         self.bears = bear_list
         return None
         
@@ -90,11 +92,10 @@ class River:
         self.view_river()
 
     def one_river_week(self):
-        factor: int = 7
-        self.one_river_day(self * factor)
+        self.one_river_day(7)
         return None
     
     def remove_fish(self, amount: int):
         for x in self.fish:
-            self.fish.pop(self.fish[0])
+            self.fish.pop(0)
         return None
