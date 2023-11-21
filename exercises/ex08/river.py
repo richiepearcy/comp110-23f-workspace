@@ -49,7 +49,7 @@ class River:
         """Killing off Bears who haven't eaten."""
         bear_list: list[Bear] = []
         for x in self.bears:
-            if x.hunger_score > 0:
+            if x.hunger_score >= 0:
                 bear_list.append(x)
         self.bears = bear_list
         return None
@@ -110,6 +110,6 @@ class River:
     
     def remove_fish(self, amount: int):
         """Removing first in line fish."""
-        for x in self.fish:
+        for x in range(0, amount):
             self.fish.pop(0)
         return None

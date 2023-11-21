@@ -35,7 +35,7 @@ def test_color_only():
 
 def test_two_colors():
     """Testing key value pairs with multiple colors."""
-    two_colors: dict[str, str] = {"Red": "Yellow", "Blue": "Orange", "Red": "Grey"}
+    two_colors: dict[str, str] = {"Tom": "Red", "Sam": "Orange", "Brian": "Red"}
     assert favorite_color(two_colors) == "Red"
 
 

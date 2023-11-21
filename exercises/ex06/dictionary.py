@@ -58,8 +58,8 @@ def alphabetizer(alphabet: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(attendance: dict[str, list[str]], y: str, z: str) -> dict[str, list[str]]:
     """Adding string elements into preexisting dictionary."""
-    if y in attendance:
-        attendance[y].append(z)
-    else:
+    if y not in attendance:
         attendance[y] = [z]
+    else:
+        attendance[y].append(z)
     return attendance
