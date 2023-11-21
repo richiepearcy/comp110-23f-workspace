@@ -34,7 +34,7 @@ def count(number: list[str]) -> dict[str, int]:
     """Counting amount a str value appears on list and corresponding the number amount with its string in new dictionary."""
     new_dict_2: dict[str, int] = {}
     count_idx = 0
-    while count_idx < len(number) - 1:
+    while count_idx < len(number):
         if number[count_idx] not in new_dict_2:
             new_dict_2[number[count_idx]] = 1
         else:
@@ -47,7 +47,7 @@ def alphabetizer(alphabet: list[str]) -> dict[str, list[str]]:
     """Transforming list of strings to dictionary ordered by strings' first letter."""
     new_dict_3: dict[str, list[str]] = {}
     idx = 0
-    while idx < len(alphabet) - 1: 
+    while idx < len(alphabet): 
         if alphabet[idx].lower()[0] not in new_dict_3:
             new_dict_3[alphabet[idx].lower()[0]] = [alphabet[idx]]
         else: 
