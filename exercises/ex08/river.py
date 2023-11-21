@@ -48,10 +48,10 @@ class River:
     
     def check_hunger(self):
         """Killing off Bears who haven't eaten."""
-        bear_list: list[str] = []
+        bear_list: list[Bear] = []
         for x in self.bears:
             if x.hunger_score > 0:
-                bear_list.append(Bear())
+                bear_list.append(x)
         self.bears = bear_list
         return None
         
@@ -59,14 +59,16 @@ class River:
         """Adding newborn fish."""
         new_fish: int
         new_fish = (len(self.fish) / 2) * 4
-        self.fish.append(new_fish)
+        for x in range(0, new_fish):
+            self.fish.append(Fish())
         return None
     
     def repopulate_bears(self):
         """Adding newborn bears."""
         new_bears: int
         new_bears = (len(self.bears) / 2) * 1
-        self.bears.append(new_bears)
+        for x in range(0, new_bears):
+            self.bears.append(Bear())
         return None
     
     def view_river(self):
