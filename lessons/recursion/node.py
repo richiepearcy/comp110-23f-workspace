@@ -24,13 +24,11 @@ class Node:
         
     def head(self) -> int:
         """Producing the int of the first element of linked list."""
-        if self.data is not int(0):
+        if self.data is int(0):
             # base case
-            return None
-        else:
             return self.data
     
-    def tail(self):
+    def tail(self) -> Node | None:
         """Producing linked list minus the head."""
         if self.data is not None:
             # non base case
@@ -43,5 +41,5 @@ class Node:
         if self.next is None:
             # base case
             return self.data
-        else:
-            return None
+        else: 
+            return self.next.next.data
